@@ -1,0 +1,20 @@
+name: docker-pipeline-najibsha
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      -name: print your name
+       run: echo "Hello World - 22it025"
+
+      -name: Checkout
+       uses:actions/checkout@v4
+
+      -name: Docker Build
+       run: docker build -t najibsha/m1-model-22it025 .
+
+      -name: Docker Images
+       run: docker images
+    
+    
+    
